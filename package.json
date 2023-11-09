@@ -1,0 +1,58 @@
+{
+  "name": "image-processing-api",
+  "version": "1.0.0",
+  "description": "Image processing API Project | Backend Development with Node.js Nanodegree from Udacity",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/index.ts",
+    "clean": "rimraf dist/",
+    "copy-files": "copyfiles -u 1 -a true src/views/** src/images/** dist/",
+    "build": "npm run clean && tsc && npm run copy-files",
+    "start": "npm run build && node dist/index.js",
+    "jasmine": "jasmine",
+    "test": "npm run build && npm run jasmine",
+    "format": "prettier --config .prettierrc ./src/**/*.ts --write",
+    "lint": "eslint ./src/**/*.ts",
+    "lint:fix": "eslint ./src/**/*.ts --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FADL285/Image-Processing-API.git"
+  },
+  "keywords": [],
+  "author": "Mohamed Fadl <Mohamed.Fadl2852@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FADL285/Image-Processing-API/issues"
+  },
+  "homepage": "https://github.com/FADL285/Image-Processing-API#readme",
+  "devDependencies": {
+    "@types/ejs": "^3.1.0",
+    "@types/express": "^4.17.13",
+    "@types/jasmine": "^4.0.3",
+    "@types/morgan": "^1.9.3",
+    "@types/node": "^17.0.30",
+    "@types/sharp": "^0.30.2",
+    "@types/supertest": "^2.0.12",
+    "@typescript-eslint/eslint-plugin": "^5.21.0",
+    "@typescript-eslint/parser": "^5.21.0",
+    "copyfiles": "^2.4.1",
+    "eslint": "^8.14.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "jasmine": "^4.1.0",
+    "jasmine-spec-reporter": "^7.0.0",
+    "nodemon": "^2.0.16",
+    "prettier": "2.6.2",
+    "rimraf": "^3.0.2",
+    "supertest": "^6.2.3",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.4"
+  },
+  "dependencies": {
+    "ejs": "^3.1.7",
+    "express": "^4.18.1",
+    "morgan": "^1.10.0",
+    "sharp": "^0.30.4"
+  }
+}
